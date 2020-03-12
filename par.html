@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Par o no</title>
+</head>
+
+<body>
+	<h1>Determinar si un número es par</h1>
+	<input type="number" name="quantity" id="numero" min="1">
+	<button onclick="Calcular()">Calcular</button>
+</body>
+
+<script>
+
+	function Calcular() {
+		const num = document.getElementById("numero").value;
+
+		if(num % 2 == 0) {
+			alert("Es par");
+		} else {
+			alert("No es par");
+		}
+	}
+
+</script>
+
+</html>
