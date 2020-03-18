@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Centígrados a Fahrenheit</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<h1>Convertir de grados Centígrados a Fahrenheit</h1>
+	<p>Centígraos</p>
+	<input type="number" name="cel" id="cel">
+	<button onclick="Calcular()">Calcular</button>
+</body>
+
+<script>
+
+	function Calcular() {
+		var cel = document.getElementById("cel").value;
+		var fah = (cel * 1.8) + 32;
+		alert("De centígrados a fahrenheit es: " + fah);
+	}
+
+</script>
+
+</html>
