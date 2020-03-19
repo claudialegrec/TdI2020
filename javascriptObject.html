@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Object</title>
+</head>
+
+<body>
+	<h1>JavaScript Objects</h1>
+	<button onclick="showNombre()">Nombre</button>
+	<button onclick="showApellido()">Apellido</button>
+	<button onclick="showEdad()">Edad</button>
+	<button onclick="showMatricula()">Matrícula</button>
+	<p id="parrafo">xxxxx</p>
+</body>
+
+<script>
+	const myObj = { "nombre":"Claudia", "apellido":"Alegre", "edad":19, "matricula":7725 };
+	function showNombre() {
+		document.getElementById("parrafo").innerHTML = myObj.nombre;
+	}
+
+	function showApellido() {
+		document.getElementById("parrafo").innerHTML = myObj.apellido;
+	}
+
+	function showEdad() {
+		document.getElementById("parrafo").innerHTML = myObj.edad;
+	}
+
+	function showMatricula() {
+		document.getElementById("parrafo").innerHTML = myObj.matricula;
+	}
+</script>
+</html>
