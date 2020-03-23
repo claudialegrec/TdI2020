@@ -2,100 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
-
     <title>Pokémon</title>
-
-    <style>
-       *{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}::selection{background:#fb9fe5;text-shadow:none}a{color:#0088CC;text-decoration:none;outline:0}a:hover{color:#005580}a img{border:none}img{max-width:100%}html{font-size:100%}body{padding:5%;font:300 1.25em/1.6 monospace;background:#fff;color:#000;}h1{font-family:"Helvetica Neue",sans-serif;line-height:1;font-weight:300;margin-bottom:1em;}.game{padding:2em;background:#eee;}
-    </style>
 </head>
+
 <body>
-
 <h1>Squirtle, Bulbasaur o Charmander</h1>
-
-<div class="game">
-    
-</div>
-
+<button onclick="Squi()">Squirtle</button>
+<button onclick="Bulb()">Bulbasaur</button>
+<button onclick="Char()">Charmander</button>
 <br>
-
-<div class="game">
-
-    <script>
-
-        // User choice
-        var userChoice = prompt("¿Qué elijes? ¿Squirtle, Bulbasaur o Charmander?");
-
-        if (! userChoice) {
-            // User choice was undefined
-            document.write("<p>Debes elegir un pokemon! Refresca la página.</p>");
-        } else {
-            // Display user choice
-            document.write("<p>Jugador:" + " " + userChoice + "</p>");
-        }
-
-        // Computer choice
-        var computerChoice = Math.random();
-
-        if (computerChoice < 0.34) {
-            computerChoice = "Squirtle";
-        } else if(computerChoice <= 0.67) {
-            computerChoice = "Bulbasaur";
-        } else {
-            computerChoice = "Charmander";
-        }
-
-        // Display computer choice
-        document.write("<p>Computadora:" + " " + computerChoice + "</p>");
-
-        // Compare user choice vs computer choice
-        var compare = function(choice1,choice2) {
-
-            if (choice1 === choice2) {
-                return "Empate";
-            }
-
-            if (choice1 === "Squirtle") {
-
-                if (choice2 === "Charmander") {
-                    return "Ganaste!";
-                } else {
-                    return "Perdiste! Intenta de nuevo.";
-                }
-
-            }
-
-            if (choice1 === "Bulbasaur") {
-
-                if (choice2 === "Squirtle") {
-                    return "Ganaste!";
-                } else {
-                    return "Perdiste! Intenta de nuevo.";
-                }
-
-            }
-
-            if (choice1 === "Charmander") {
-
-                if (choice2 === "Squirtle") {
-                    return "Perdiste! Intenta de nuevo.";
-                } else {
-                    return "Ganaste!";
-                }
-
-            }
-        };
-
-        // Run the compare function
-        var results = compare(userChoice,computerChoice);
-
-        // Display results
-        document.write("<br><hr><br>" + results);
-
-    </script>
-
-</div>
-
 </body>
+
+<script>
+    function Squi() {
+        var img = document.createElement('img');
+        img.src = "Squirtle.png";
+        img.style.height = '100px';
+        img.style.width = '100px';
+        document.body.appendChild(img);
+    }
+
+    function Bulb() {
+        var img = document.createElement('img');
+        img.src = "Bulbasaur.png";
+        img.style.height = '100px';
+        img.style.width = '100px';
+        document.body.appendChild(img);
+    }
+
+    function Char() {
+        var img = document.createElement('img');
+        img.src = "Charmander.png";
+        img.style.height = '100px';
+        img.style.width = '100px';
+        document.body.appendChild(img);
+    }
+</script>
 </html>
